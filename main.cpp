@@ -67,20 +67,12 @@ int main()
 	std::string password;
 	std::string key;
 
-	std::cin >> option;
-	switch (option)
-	{
-		
-		case 1:
+	
 			std::cout << XorStr("\n Enter license: ");
 			std::cin >> key;
 			KeyAuthApp.license(key);
-			break;
-		default:
-			std::cout << XorStr("\n\n Status: Failure: Invalid Selection");
-			Sleep(3000);
-			exit(0);
-	}
+		
+	
 
 	std::vector<std::uint8_t> rawData = KeyAuthApp.download("12345"); //.dll fileID here
 
