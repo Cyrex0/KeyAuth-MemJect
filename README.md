@@ -6,6 +6,7 @@ KeyAuth CPP Example
 - Add application info to main.cpp file, here is a video tutorial if needed: https://youtube.com/watch?v=uJ0Umy_C6Fg
 - Set .dll file ID on line 85 in main.cpp
 - Set Game process name on line 93 in main.cpp
+- You can set x64/x86 target procecss in injector.cpp lines 9-13
 
 
 
