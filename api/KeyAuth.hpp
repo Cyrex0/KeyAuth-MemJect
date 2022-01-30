@@ -506,17 +506,12 @@ namespace KeyAuth {
 
 			std::string to_return;
 
-			curl_easy_setopt(curl, CURLOPT_URL, XorStr("https://keyauth.com/api/1.0/").c_str());
-			curl_easy_setopt(curl, CURLOPT_USERAGENT, XorStr("KeyAuth").c_str());
+			curl_easy_setopt(curl, CURLOPT_URL, XorStr("https://keyauth.win/api/1.0/").c_str());
 
-			curl_easy_setopt(curl, CURLOPT_NOPROXY, XorStr("keyauth.com").c_str());
+			curl_easy_setopt(curl, CURLOPT_NOPROXY, XorStr("keyauth.win").c_str());
 
 			curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
 			curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0);
-			
-			curl_easy_setopt(curl, CURLOPT_DNS_SERVERS, XorStr("1.1.1.1,1.0.0.1").c_str()); // resolve ISP blockage issues caused by false domain report https://github.com/mitchellkrogza/Phishing.Database/issues/194
-			
-			curl_easy_setopt(curl, CURLOPT_PINNEDPUBLICKEY, "sha256//zaXl1uxtEA6FAR8KKoew4FYX+X3Khlfd/zjVD+SdMpc=");
 
 			curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data.c_str());
 
